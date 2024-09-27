@@ -1,0 +1,15 @@
+{
+  "system_configuration": [
+    {
+      "database": [
+        {
+          "type": "mysql",
+          "host": "localhost",
+          "db_name": "wenet_cms",
+          "username": "root",
+          "password": "belDEN99**"
+        }
+      ]
+    }
+  ]
+}
