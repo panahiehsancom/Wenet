@@ -20,10 +20,10 @@ class PDOConnection {
 				$mysql_connection_string = "mysql:host=$host;dbname=$databaseName";
 				$this->db = new PDO($mysql_connection_string, $db_info->username, $db_info->password); 
 				$this->db->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-				echo "mysql connection success <br/>";		
+				//echo "mysql connection success <br/>";		
 			}
 			catch(PDOException $error){
-				echo "Failed to connect to db <br/>";
+				//echo "Failed to connect to db <br/>";
 				echo $error->getMessage();
 			}
 	}  
@@ -42,11 +42,11 @@ class PDOConnection {
 			$user_info = $stmt->fetch();
 			if($user_info)
 			{
-				echo $user_info['ID'];
-				return;
+				//echo $user_info['ID'];
+				return true;
 			}
 		}
-		echo 'Invalid<br>';
+		echo false;
 	}
 
 }

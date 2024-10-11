@@ -1,0 +1,22 @@
+
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+img.logo {
+    width: 100px;
+    margin: 2rem auto;
+    display: block;
+}
+button.set-margin {
+    margin: 2rem auto;
+}
+button.full-width {
+    width: 100%;
+}
+h1.small {
+    font-size: 28px;
+}
