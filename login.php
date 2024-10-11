@@ -70,7 +70,7 @@
                 <h1 class="header center small">ورود به پنل کاربری</h1>
                 <img  class="logo center" src="img/wenet-logo.webp">
                 
-                <div class="card horizontal col s12">
+                <div class="card  col s12">
                     
                         <div class="input-field col s12 ">
                         <i class="material-icons prefix">account_circle</i>
