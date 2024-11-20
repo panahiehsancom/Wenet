@@ -2590,7 +2590,7 @@ textarea {
 }
 
 ul:not(.browser-default) {
-  padding-left: 0;
+  padding-right: 0;
   list-style-type: none;
 }
 
@@ -5247,12 +5247,13 @@ small {
 .btn, .btn-large, .btn-small {
   text-decoration: none;
   color: #fff;
-  background-color: #26a69a;
+  background-color: #673AB7;
   text-align: center;
   letter-spacing: .5px;
   -webkit-transition: background-color .2s ease-out;
   transition: background-color .2s ease-out;
   cursor: pointer;
+  font-weight: 600;
 }
 
 .btn:hover, .btn-large:hover, .btn-small:hover {
@@ -6533,10 +6534,11 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
 }
 
 .input-field > label:not(.label-icon).active {
-  -webkit-transform: translateY(-14px) scale(0.8);
-          transform: translateY(-14px) scale(0.8);
+  /* -webkit-transform: translateY(-14px) scale(0.8); */
+  transform: translateY(-14px) scale(1);
   -webkit-transform-origin: 0 0;
-          transform-origin: 0 0;
+  transfor;
+  transform-origin: 0 0;
 }
 
 .input-field > input[type]:-webkit-autofill:not(.browser-default) + label,
@@ -7519,12 +7521,12 @@ input[type=range]::-ms-thumb {
 
 .sidenav {
   position: fixed;
-  width: 300px;
+  width: 280px;
   left: 0;
   top: 0;
   margin: 0;
   -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  transform: translateX(-100%);
   height: 100%;
   height: calc(100% + 60px);
   height: -moz-calc(100%);
@@ -7534,9 +7536,9 @@ input[type=range]::-ms-thumb {
   overflow-y: auto;
   will-change: transform;
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   -webkit-transform: translateX(-105%);
-          transform: translateX(-105%);
+  transform: translateX(-105%);
 }
 
 .sidenav.right-aligned {
@@ -7555,6 +7557,7 @@ input[type=range]::-ms-thumb {
 .sidenav li {
   float: none;
   line-height: 48px;
+  border-bottom: 1px solid #e1e1e1;
 }
 
 .sidenav li.active {
@@ -7568,7 +7571,7 @@ input[type=range]::-ms-thumb {
   font-weight: 500;
   height: 48px;
   line-height: 48px;
-  padding: 0 32px;
+  padding: 0 20px;
 }
 
 .sidenav li > a:hover {
@@ -7598,12 +7601,13 @@ input[type=range]::-ms-thumb {
 .sidenav li > a > i,
 .sidenav li > a > [class^="mdi-"], .sidenav li > a li > a > [class*="mdi-"],
 .sidenav li > a > i.material-icons {
-  float: left;
+  float: right;
   height: 48px;
   line-height: 48px;
-  margin: 0 32px 0 0;
+  margin: 0 0px 0 10px;
   width: 24px;
-  color: rgba(0, 0, 0, 0.54);
+  font-size: 18px;
+  color: #673AB7;
 }
 
 .sidenav .divider {
@@ -9076,3 +9080,6 @@ input[type=range]::-ms-thumb {
 @font-face{font-family:PeydaWeb;font-style:normal;font-weight:900;src:url(../fonts/PeydaWeb-Black.woff2) format("woff2"),url(fonts/PeydaWeb-Black.woff) format("woff")}
 @font-face{font-family:PeydaWeb;font-style:normal;font-weight:700;src:url(../fonts/PeydaWeb-Bold.woff2) format("woff2"),url(fonts/PeydaWeb-Bold.woff) format("woff")}
 @font-face{font-family:PeydaWeb;font-style:normal;font-weight:400;src:url(../fonts/PeydaWeb-Regular.woff2) format("woff2"),url(fonts/PeydaWeb-Regular.woff) format("woff")}
+h1.small-header {
+  font-size: 25px;
+}

@@ -63,41 +63,71 @@
 		}			
 </script>
 
+<ul id="slide-out" class="sidenav sidenav-fixed">
+  <li><a href="#"><i class="material-icons">add</i>        داشبورد</a></li>
+  <li><a href="#"><i class="material-icons">border_color</i> نوشته ها</a></li>
+  <li><a href="#"><i class="material-icons">assignment</i> برگه ‌ها</a></li>
+  <li><a href="#"><i class="material-icons">wallpaper</i> رسانه ها</a></li>
+  <li><a href="#"><i class="material-icons">comment</i>  ‌نظرات کاربران</a></li>
+  <li><a href="#"><i class="material-icons">settings</i> تنظیمات</a></li>
+  <li><a href="#"><i class="material-icons">add</i> منو ها</a></li>
+  <li><a href="#"><i class="material-icons">person</i> کاربران</a></li>
+</ul>
+
+
 
     <div class="container">
         <div class="row">
-            <div class="col ">
-                <h1 class="header center small">ورود به پنل کاربری</h1>
-                <img  class="logo center" src="img/wenet-logo.webp">
+            <div class="col s12">
+                <h1 class="header small-header  "> ایجاد کاربر جدید</h1>
+             
                 
-                <div class="card  col s12">
-                    
-    <ul id="slide-out" class="sidenav sidenav-fixed">
-      <li><a href="#">داشبورد</a></li>
-      <li><a href="#">نوشته ها</a></li>
-      <li><a href="#">برگه ‌ها</a></li>
-      <li><a href="#">رسانه ها</a></li>
-      <li><a href="#">تنظیمات</a></li>
-      <li><a href="#">منو ها</a></li>
-      <li><a href="#">رسانه ها</a></li>
 
-
-
-
-
-      <li><a href="#">کاربران</a></li>
-    </ul>
-    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-       
-                            
-                </div>
                         
-                        <div class="col s12">
-                            <button class="btn waves-effect waves-light deep-purple darken-3 set-margin full-width" type="submit" onclick="check_user()" name="action">ورود
-                                <i class="material-icons right">send</i>
-                            </button>
-                        </div> 
- 			          <div class="flex column formErrors" id="loginErrors"></div>
+                <div class="row">
+                  <form class="col s12">
+                    <div class="row">
+                      <div class="input-field col s12 m6">
+                        <i class="material-icons prefix">person_outline</i>
+                        <input  id="first_name" type="text" class="validate">
+                        <label for="first_name"> نام </label>
+                      </div>
+                      <div class="input-field col s12 m6">
+                        <i class="material-icons prefix">person_outline</i>
+                        <input id="last_name" type="text" class="validate">
+                        <label for="last_name">نام خانوادگی </label>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <i class="material-icons prefix">person_outline</i>
+                        <input   id="id" type="text" class="validate">
+                        <label for="id">نام کاربری</label>
+                      </div>
+
+                      <div class="input-field col s12 m6">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input id="password" type="password" class="validate">
+                        <label for="password">کلمه عبور</label>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="input-field col s12 m6">
+                        <i class="material-icons prefix">mail_outline</i>
+                        <input id="email" type="email" class="validate">
+                        <label for="email">آدرس ایمیل</label>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="input-field col s12">
+                    <div class="btn">
+                      <span>ثبت </span>
+                    </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
 
                 </div>
             </div>
