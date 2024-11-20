@@ -7686,9 +7686,9 @@ input[type=range]::-ms-thumb {
 }
 
 .sidenav.sidenav-fixed {
-  left: 0;
+  right: 0;
   -webkit-transform: translateX(0);
-          transform: translateX(0);
+  transform: translateX(0);
   position: fixed;
 }
 
