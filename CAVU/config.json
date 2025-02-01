@@ -1,0 +1,15 @@
+{
+  "system_configuration": [
+    {
+      "database": [
+        {
+          "type": "mysql",
+          "host": "targetek.ae",
+          "db_name": "targetek_CAVU",
+          "username": "targetek_edenpani",
+          "password": "belDEN99**"
+        }
+      ]
+    }
+  ]
+}
