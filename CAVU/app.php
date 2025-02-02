@@ -147,6 +147,7 @@ var i=0;
       function initialize() {
           var mapOptions = {
           zoom: 8,
+          mapTypeId:'satellite',
             center: new google.maps.LatLng(28.453, 77.075)
             };
         map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);

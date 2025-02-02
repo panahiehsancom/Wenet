@@ -1,8 +1,7 @@
-var saveObject=[];
-var overlays=[];
+var saveObject = [];
+var overlays = [];
 
-function HashTable(obj)
-{
+function HashTable(obj) {
     this.length = 0;
     this.items = {};
     for (var p in obj) {
@@ -12,8 +11,7 @@ function HashTable(obj)
         }
     }
 
-    this.setItem = function(key, value)
-    {
+    this.setItem = function (key, value) {
         var previous = undefined;
         if (this.hasItem(key)) {
             previous = this.items[key];
@@ -25,17 +23,15 @@ function HashTable(obj)
         return previous;
     }
 
-    this.getItem = function(key) {
+    this.getItem = function (key) {
         return this.hasItem(key) ? this.items[key] : undefined;
     }
 
-    this.hasItem = function(key)
-    {
+    this.hasItem = function (key) {
         return this.items.hasOwnProperty(key);
     }
-   
-    this.removeItem = function(key)
-    {
+
+    this.removeItem = function (key) {
         if (this.hasItem(key)) {
             previous = this.items[key];
             this.length--;
@@ -47,8 +43,7 @@ function HashTable(obj)
         }
     }
 
-    this.keys = function()
-    {
+    this.keys = function () {
         var keys = [];
         for (var k in this.items) {
             if (this.hasItem(k)) {
@@ -58,8 +53,7 @@ function HashTable(obj)
         return keys;
     }
 
-    this.values = function()
-    {
+    this.values = function () {
         var values = [];
         for (var k in this.items) {
             if (this.hasItem(k)) {
@@ -69,7 +63,7 @@ function HashTable(obj)
         return values;
     }
 
-    this.each = function(fn) {
+    this.each = function (fn) {
         for (var k in this.items) {
             if (this.hasItem(k)) {
                 fn(k, this.items[k]);
@@ -77,135 +71,136 @@ function HashTable(obj)
         }
     }
 
-    this.clear = function()
-    {
+    this.clear = function () {
         this.items = {}
         this.length = 0;
     }
 }
-        
+
 
 
 /*-----------------------------------------hash table ---------------------------------------------*/
 var saveObjectOverlays = new HashTable();
 var overlaysSaveObject = new HashTable();
 var map // Global declaration of the map
-var i=0;
-      
-      var iw = new google.maps.InfoWindow(); // Global declaration of the infowindow
-      var lat_longs = new Array();
-      var markers = new Array();
-      var drawingManager;
-      function initialize() {
-          var mapOptions = {
-          zoom: 8,
-            center: new google.maps.LatLng(28.453, 77.075)
-            };
-        map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
-        drawingManager = new google.maps.drawing.DrawingManager({
-        drawingMode: google.maps.drawing.OverlayType.POLYGON,
-          drawingControl: true,
-          drawingControlOptions: {
-            position: google.maps.ControlPosition.TOP_CENTER,
-          drawingModes: [google.maps.drawing.OverlayType.POLYGON]
-        },
-            polygonOptions: {
-              editable: true,
-              draggable: true,
-                      fillColor: '#cccccc',
-                      fillOpacity: 0.5,
-                      strokeColor: '#000000',
+var i = 0;
 
-            }
-      });
-      drawingManager.setMap(map);
-      
-      google.maps.event.addListener(drawingManager, "overlaycomplete", function(event) {
+var iw = new google.maps.InfoWindow(); // Global declaration of the infowindow
+var lat_longs = new Array();
+var markers = new Array();
+var drawingManager;
+function initialize() {
+
+    map = new google.maps.Map(document.getElementById("map_canvas"),
+        {
+            mapTypeId: 'satellite',
+            zoom: 8,
+            center: new google.maps.LatLng(28.453, 77.075)
+        }); 
+    drawingManager = new google.maps.drawing.DrawingManager({
+        drawingMode: google.maps.drawing.OverlayType.POLYGON,
+        drawingControl: true,
+        drawingControlOptions: {
+            position: google.maps.ControlPosition.TOP_CENTER,
+            drawingModes: [google.maps.drawing.OverlayType.POLYGON]
+        },
+        polygonOptions: {
+            editable: true,
+            draggable: true,
+            fillColor: '#cccccc',
+            fillOpacity: 0.5,
+            strokeColor: '#000000',
+
+        }
+    });
+    drawingManager.setMap(map);
+
+    google.maps.event.addListener(drawingManager, "overlaycomplete", function (event) {
         //$('#myModal').modal({show:true});
         var newShape = event.overlay;
         newShape.type = event.type;
 
-         overlayClickListener(event.overlay);
-                $('#vertices').val(event.overlay.getPath().getArray());
-                $('#area').val(google.maps.geometry.spherical.computeArea(event.overlay.getPath()));
-               
-                
-                
-      });
+        overlayClickListener(event.overlay);
+        $('#vertices').val(event.overlay.getPath().getArray());
+        $('#area').val(google.maps.geometry.spherical.computeArea(event.overlay.getPath()));
 
-            //google.maps.event.addListener(drawingManager, "overlaycomplete", function(event){
-                
-               
-            //});
-        }
+
+
+    });
+
+    //google.maps.event.addListener(drawingManager, "overlaycomplete", function(event){
+
+
+    //});
+}
 function overlayClickListener(overlay) {
-  overlays.push(overlay.getPath().getArray());
- google.maps.event.addListener(overlay, "click", function(event){
+    overlays.push(overlay.getPath().getArray());
+    google.maps.event.addListener(overlay, "click", function (event) {
         $('#vertices').val(overlay.getPath().getArray());
         $('#area').val(google.maps.geometry.spherical.computeArea(overlay.getPath()));
-        
-          
+
+
     });
 
 
-    
-    google.maps.event.addListener(overlay.getPath(), 'set_at', function() {
-            console.log("test");
-        });
+
+    google.maps.event.addListener(overlay.getPath(), 'set_at', function () {
+        console.log("test");
+    });
 }
 
 
- //initialize();
+//initialize();
 google.maps.event.addDomListener(window, 'load', initialize);
-$(function(){
-    $('#save').click(function(){
-      var container={
-       path:document.getElementById('vertices').value,
-         area:document.getElementById('area').value,
-         shapeName:document.getElementById('zoneName').value,
-         shapeType:document.getElementById('zoneType').value
-      }
-      if(saveObjectOverlays.hasItem(container.path)){
-          alert("already present");
-        }else{
-          
-          saveObject.push(container);
-          var len=saveObject.length-1;
-            for(var i=0;i<overlays.length;i++){
-                if(container.path==overlays[i]){
-               // overlaysSaveObject.setItem(overlays[i],saveObject[len]);
-                //overlaysSaveObject[overlays[i]]=container;
-                saveObjectOverlays.setItem(saveObject[len].path,overlays[i]);
-                //saveObjectOverlays[container]=overlays[i];
-                alert("saved ");
-                
-                break;
-                
-            }
+$(function () {
+    $('#save').click(function () {
+        var container = {
+            path: document.getElementById('vertices').value,
+            area: document.getElementById('area').value,
+            shapeName: document.getElementById('zoneName').value,
+            shapeType: document.getElementById('zoneType').value
+        }
+        if (saveObjectOverlays.hasItem(container.path)) {
+            alert("already present");
+        } else {
 
-          }
+            saveObject.push(container);
+            var len = saveObject.length - 1;
+            for (var i = 0; i < overlays.length; i++) {
+                if (container.path == overlays[i]) {
+                    // overlaysSaveObject.setItem(overlays[i],saveObject[len]);
+                    //overlaysSaveObject[overlays[i]]=container;
+                    saveObjectOverlays.setItem(saveObject[len].path, overlays[i]);
+                    //saveObjectOverlays[container]=overlays[i];
+                    alert("saved ");
+
+                    break;
+
+                }
+
+            }
         }
 
-                $('#vertices').val(null);
-                $('#area').val(null);
-                $('#zoneName').val(null);
-                $('#zoneType').val(null);
+        $('#vertices').val(null);
+        $('#area').val(null);
+        $('#zoneName').val(null);
+        $('#zoneType').val(null);
 
 
     });
-    
-   $('#test').click(function(){
-    
-            var str=JSON.stringify(saveObject);
 
-              alert(str);
+    $('#test').click(function () {
 
-         window.location.href = "day5.php?str=" + str; 
-        
-   });
-   $('#getData').click(function(){
-        window.location.href = "day5.php?val=getData" ;
-   });
+        var str = JSON.stringify(saveObject);
+
+        alert(str);
+
+        window.location.href = "day5.php?str=" + str;
+
+    });
+    $('#getData').click(function () {
+        window.location.href = "day5.php?val=getData";
+    });
 
 
 });
