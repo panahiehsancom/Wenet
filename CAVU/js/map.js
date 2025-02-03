@@ -89,6 +89,14 @@ var iw = new google.maps.InfoWindow(); // Global declaration of the infowindow
 var lat_longs = new Array();
 var markers = new Array();
 var drawingManager;
+function myButton(){
+    var btn = $('<div class="my-button"></div>');
+    btn.bind('click', function(){
+        // logic here...
+        alert('button clicked!');
+    });
+    return btn[0];
+}
 function initialize() {
 
     map = new google.maps.Map(document.getElementById("map_canvas"),
@@ -97,6 +105,7 @@ function initialize() {
             zoom: 8,
             center: new google.maps.LatLng(28.453, 77.075)
         }); 
+        map.controls[google.maps.ControlPosition.TOP_CENTER].push(myButton());
     drawingManager = new google.maps.drawing.DrawingManager({
         drawingMode: google.maps.drawing.OverlayType.POLYGON,
         drawingControl: true,

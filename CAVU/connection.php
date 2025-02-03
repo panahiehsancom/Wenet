@@ -41,11 +41,10 @@ class PDOConnection
 		if ($result) {
 			$user_info = $stmt->fetch();
 			if ($user_info) {
-				//echo $user_info['ID'];
-				return true;
+				return $user_info['userid']; 
 			}
 		}
-		return false;
+		return '';
 	}
 	function is_email_exist($email)
 	{

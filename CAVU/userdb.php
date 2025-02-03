@@ -40,17 +40,20 @@ if (isset($_REQUEST) && isset($_REQUEST['action'])) {
 	if ($action === "login") {
 		$user_info = $_POST["user_info"];
 		$obj = json_decode($user_info);
-  
-		$username = $obj->{'username'}; 
+
+		$username = $obj->{'username'};
 		$password = $obj->{'password'};
 
-	 
-		take_log("input username = " . $username); 
+
+		take_log("input username = " . $username);
 		take_log("input password = " . $password);
 
 		$db_connection = new PDOConnection();
-		$state = $db_connection->authenticate( $username, $password);
-
+		$userid = $db_connection->authenticate($username, $password);
+		$_SESSION['userid'] = $userid;
+		$state = false;
+		if (strlen($userid) > 0)
+			$state = true;
 		$json_response =
 			[
 				"valid" => $state

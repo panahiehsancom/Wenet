@@ -13,44 +13,7 @@
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
-  <script>
-		async function check_user()
-		{
-			try
-			{  
-				username = document.getElementById("username").value;
-				password = document.getElementById("password").value;
-				const auth_data = {
-					uname:username,
-					pass:password,
-				};
-				const formData = new FormData();
-				formData.append("auth_data", JSON.stringify(auth_data));
-				const response = await axios.post("authenticate.php?action=auth", formData); 
-				const valid_auth =  response.data;
-				console.log(valid_auth);
-				if(valid_auth.response.valid) { 
-						window.location.href = "index.php";
-        } else {
-          const error = document.createElement("p");
-          error.textContent = "Username and password is wrong!";
-          error.classList.add("redColor");
-          loginErrors.appendChild(error);
-          setTimeout(() => {
-              loginErrors.removeChild(error);
-          }, 5000);
-          return;
-        }
-				
-			}
-			catch(error)
-			{
-				//closeLoading();
-				//throwError('Error from server!');
-				console.log(error);
-			}
-		}			
-</script>
+  
   <body>
 
     <!-- Navbar -->
