@@ -2,7 +2,7 @@
 session_start();
 if(!isset($_SESSION['userid']))
 {
-  header("Location: login.php"); 
+  //header("Location: login.php"); 
 }
 ?>
 <html>
@@ -345,7 +345,8 @@ $(function(){
       <div class="col-md-9 col-lg-9 col-sm-9 col-xs-9">
         <div id="map_canvas" style="width:100%; height:700px;"></div>
           </div>
-          <div class="col-md-3 col-lg-3 col-sm-3 col-xs-3" style="">
+
+          <div class="" style="">
           <h4>Coordinates</h4>
             <textarea type="text" rows="5" name="vertices" value="" id="vertices" style="width:100%;">  </textarea>
             <h4>Area</h4>
