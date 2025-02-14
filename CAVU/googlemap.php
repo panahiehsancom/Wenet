@@ -1,4 +1,134 @@
 
+<!DOCTYPE html>
+<?php
+$servername = "localhost";
+$username = "**********";
+$password = "**********";
+$db="map";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password,$db);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+if(isset($_GET['str']))
+  $str= $_GET['str'];
+else
+  $str="{error not recieved}";
+$ar = json_decode($str,true);
+
+
+//echo $ar[0]['path']."</br>";
+
+for($i=0;$i<sizeof($ar);$i++){
+ $shapeName=$ar[$i]['shapeName'];
+  $path=$ar[$i]['path']; 
+  
+
+  $shapeType=$ar[$i]['shapeType'];
+$query="insert INTO polygon(zone_name,zone_type,path)values('$shapeName','$shapeType','$path')";
+
+//if (mysqli_query($conn, $query)) {
+if ($conn->query($query)) {
+  //echo "inserted";
+}else{
+  die(" insert failed: " .$conn->error);
+}
+//printf("Last inserted record has id %d\n", mysql_insert_id());
+
+
+
+
+// for second db
+
+
+
+$query1="select max(id) as maxid from polygon";
+$result=mysqli_query($conn, $query1);
+  if (mysqli_num_rows($result) > 0) {
+      while ($row=mysqli_fetch_array($result) ){
+        $maxid= $row['maxid'];
+      }
+  }
+
+$coordinates=explode("),(",$path);
+  $cordMaster= array();
+
+  for($j=0;$j<sizeof($coordinates);$j++){
+
+    $coordinates[$j]=trim($coordinates[$j],"(");
+      $coordinates[$j]=trim($coordinates[$j],")");
+    }
+  for($j=0;$j<sizeof($coordinates);$j++){
+  //create array of prev and nxt
+  if($j==0){
+  $cordMaster[]= array(
+  
+    'coordinates'=>$coordinates[$j],
+    'next'=>$coordinates[$j+1],
+    'prev'=>$coordinates[sizeof($coordinates)-1]
+    );
+  }else if($j==sizeof($coordinates)-1){
+    $cordMaster[]= array(
+    'coordinates'=>$coordinates[$j],
+    'next'=>$coordinates[0],
+    'prev'=>$coordinates[$j-1]
+    );
+  }else{
+    $cordMaster[]= array(
+    'coordinates'=>$coordinates[$j],
+    'next'=>$coordinates[$j+1],
+    'prev'=>$coordinates[$j-1]
+    );
+     
+}
+    $cordlatlng=$cordMaster[$j]['coordinates'];$prev=$cordMaster[$j]['prev'];$next=$cordMaster[$j]['next'];
+    $query2="insert INTO latlng(point,prev,next,polygon)values('$cordlatlng','$prev','$next',$maxid)";
+    if(mysqli_query($conn, $query2)){
+      //echo "got latlng"."<br />";
+    }
+    else{
+      echo " failed lat lng".$conn->error;
+    }
+}   
+  
+
+}
+
+//create fuction for geojson
+if(isset($_GET['val'])){
+  createGeoJson();
+}
+
+function createGeoJson(){ 
+
+      // Create connection
+$conn = new mysqli("localhost", "zomato", "zomato","map");
+$
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+      $joinQuery="select p.zone_name,p.zone_type,l.point,l.prev,l.next,l.Polygon from polygon p,latlng l where l.polygon=p.id ";
+      $result=mysqli_query($conn, $joinQuery);
+           $count=(mysqli_num_rows($result);
+          $row=mysqli_fetch_array($result);
+
+        
+    
+            
+  }
+
+
+?>
+
+
+
+
 <html>
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">

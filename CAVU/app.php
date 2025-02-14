@@ -48,6 +48,7 @@ if(!isset($_SESSION['userid']))
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
     <!--<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=drawing"></script>-->
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false&amp;libraries=drawing,geometry"></script>
+    
     <script>
 
   var saveObject=[];
@@ -269,6 +270,9 @@ $(function(){
 
 
 </script>
+<script src="js/axios.min.js"></script>
+    <script src="js/user.js"></script>
+
   </head>
   <body>
 
@@ -286,7 +290,7 @@ $(function(){
     </li>
         <li><a href="">Profile Setting</a></li>
         <li><a href="">Join Us</a></li>
-        <li><a href="">Log Out</a></li>
+        <li><a href="javascript:logout()">Log Out</a></li>
       <li class="no-padding"> 
         <ul class="collapsible collapsible-accordion">
           <li class="bold">
@@ -313,18 +317,20 @@ $(function(){
             <input id="search" placeholder="Search">
             <div class="search-results"></div>
           </div>
-        
+      
+
         <div class="col s12 no-padding">
-            <ul class="field-item">
+            <ul class="field-item" id = "user_requests">
                 <li><img src="images/field.webp"> <span class="title">Field Example</span> <p>Field Description - 141.26 acr </p></li>
                 <li><img src="images/field.webp"> <span class="title">Field Example</span> <p>Field Description - 111.56 acr </p></li>
             </ul>
         </div>
+        
           <div class="center">
             
             <br>
 
-             <a class="btn solid" href="register.php">   <i class="material-icons">add</i> Add New Field</a> 
+            <button class="btn solid"  onclick="add_new_request()">Add New Field</button> 
           </div>
           
           <br>
@@ -339,7 +345,7 @@ $(function(){
       <div class="col-md-9 col-lg-9 col-sm-9 col-xs-9">
         <div id="map_canvas" style="width:100%; height:700px;"></div>
           </div>
-          <div class="col-md-3 col-lg-3 col-sm-3 col-xs-3" style="display:none;">
+          <div class="col-md-3 col-lg-3 col-sm-3 col-xs-3" style="">
           <h4>Coordinates</h4>
             <textarea type="text" rows="5" name="vertices" value="" id="vertices" style="width:100%;">  </textarea>
             <h4>Area</h4>
