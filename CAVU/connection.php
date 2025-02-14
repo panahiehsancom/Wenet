@@ -9,6 +9,7 @@ class PDOConnection
 	function __construct()
 	{
 		try {
+		take_log('step 1');
 			$db_info = ConfigReader::get_database_connection();
 			$host = $db_info->host;
 			$databaseName = $db_info->db_name;

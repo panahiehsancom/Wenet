@@ -9429,3 +9429,26 @@ body.light .box {
 body.light ul.tabs {
     background: #fff;
 }
+span.cavu {
+    font-weight: bold;
+    color: #1de9c3;
+}
+.service {
+    margin-top: 4rem;
+}
+.service h4 {
+    height: 58px;
+    margin: 30px auto;
+    font-size: 25px;
+    font-weight: 500;
+}
+.cta {display: inline-block;margin: 6rem auto;padding: 2rem 4rem !important;!i;!;text-align: left;background: #212121;border-radius: 60px;}
+
+.cta a.btn {
+    float: right;
+    margin: 2rem;
+}
+body.light .cta {
+    background: #fff;
+    border: 2px solid #c1efe7;
+}
