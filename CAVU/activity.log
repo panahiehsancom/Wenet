@@ -1,0 +1,121 @@
+Request Recevied
+Request Recevied
+action is =load_requests
+load user requests!
+input userid = 27399E62-00FE-4C57-82B9-FD4F3A163FBD
+user id is27399E62-00FE-4C57-82B9-FD4F3A163FBD
+output json = [{"RequestID":"22C0A9A6-79A3-42CC-A2AB-77B62797880A","RequestTitle":"title","RequestDescription":"description","Date":"2025-02-12 10:55:05 am"}]
+Request Recevied
+Request Recevied
+action is =get_vertices
+load request vertices!
+input json = {"id":1,"username":"","password":"","name":"","family":"","email":""}
+input request_id = 
+req_id is
+output json = []
+Request Recevied
+Request Recevied
+action is =load_requests
+load user requests!
+input userid = 27399E62-00FE-4C57-82B9-FD4F3A163FBD
+user id is27399E62-00FE-4C57-82B9-FD4F3A163FBD
+output json = [{"RequestID":"22C0A9A6-79A3-42CC-A2AB-77B62797880A","RequestTitle":"title","RequestDescription":"description","Date":"2025-02-12 10:55:05 am"}]
+Request Recevied
+Request Recevied
+action is =get_vertices
+load request vertices!
+input json = {"requestid":"22C0A9A6-79A3-42CC-A2AB-77B62797880A"}
+input request_id = 22C0A9A6-79A3-42CC-A2AB-77B62797880A
+req_id is22C0A9A6-79A3-42CC-A2AB-77B62797880A
+output json = [{"Latitude":"29.74411311357304","Longitude":" 76.36880789399149"},{"Latitude":"28.42884906757866","Longitude":" 75.60525808930399"},{"Latitude":"28.28866505577025","Longitude":" 77.50589285492899"},{"Latitude":"29.562710858462694","Longitude":" 77.80252371430399"}]
+Request Recevied
+Request Recevied
+action is =load_requests
+load user requests!
+input userid = 27399E62-00FE-4C57-82B9-FD4F3A163FBD
+user id is27399E62-00FE-4C57-82B9-FD4F3A163FBD
+output json = [{"RequestID":"22C0A9A6-79A3-42CC-A2AB-77B62797880A","RequestTitle":"title","RequestDescription":"description","Date":"2025-02-12 10:55:05 am"}]
+Request Recevied
+Request Recevied
+action is =get_vertices
+load request vertices!
+input json = {"requestid":"22C0A9A6-79A3-42CC-A2AB-77B62797880A"}
+input request_id = 22C0A9A6-79A3-42CC-A2AB-77B62797880A
+req_id is22C0A9A6-79A3-42CC-A2AB-77B62797880A
+output json = [{"Latitude":"29.74411311357304","Longitude":" 76.36880789399149"},{"Latitude":"28.42884906757866","Longitude":" 75.60525808930399"},{"Latitude":"28.28866505577025","Longitude":" 77.50589285492899"},{"Latitude":"29.562710858462694","Longitude":" 77.80252371430399"}]
+Request Recevied
+Request Recevied
+action is =load_requests
+load user requests!
+input userid = 27399E62-00FE-4C57-82B9-FD4F3A163FBD
+user id is27399E62-00FE-4C57-82B9-FD4F3A163FBD
+output json = [{"RequestID":"22C0A9A6-79A3-42CC-A2AB-77B62797880A","RequestTitle":"title","RequestDescription":"description","Date":"2025-02-12 10:55:05 am"}]
+Request Recevied
+Request Recevied
+action is =get_vertices
+load request vertices!
+input json = {"requestid":"22C0A9A6-79A3-42CC-A2AB-77B62797880A"}
+input request_id = 22C0A9A6-79A3-42CC-A2AB-77B62797880A
+req_id is22C0A9A6-79A3-42CC-A2AB-77B62797880A
+output json = [{"Latitude":"29.74411311357304","Longitude":" 76.36880789399149"},{"Latitude":"28.42884906757866","Longitude":" 75.60525808930399"},{"Latitude":"28.28866505577025","Longitude":" 77.50589285492899"},{"Latitude":"29.562710858462694","Longitude":" 77.80252371430399"}]
+Request Recevied
+Request Recevied
+action is =get_vertices
+load request vertices!
+input json = {"requestid":"22C0A9A6-79A3-42CC-A2AB-77B62797880A"}
+input request_id = 22C0A9A6-79A3-42CC-A2AB-77B62797880A
+req_id is22C0A9A6-79A3-42CC-A2AB-77B62797880A
+output json = [{"Latitude":"29.74411311357304","Longitude":" 76.36880789399149"},{"Latitude":"28.42884906757866","Longitude":" 75.60525808930399"},{"Latitude":"28.28866505577025","Longitude":" 77.50589285492899"},{"Latitude":"29.562710858462694","Longitude":" 77.80252371430399"}]
+Request Recevied
+Request Recevied
+action is =load_requests
+load user requests!
+input userid = 27399E62-00FE-4C57-82B9-FD4F3A163FBD
+user id is27399E62-00FE-4C57-82B9-FD4F3A163FBD
+output json = [{"RequestID":"22C0A9A6-79A3-42CC-A2AB-77B62797880A","RequestTitle":"title","RequestDescription":"description","Date":"2025-02-12 10:55:05 am"}]
+Request Recevied
+Request Recevied
+action is =get_vertices
+load request vertices!
+input json = {"requestid":"22C0A9A6-79A3-42CC-A2AB-77B62797880A"}
+input request_id = 22C0A9A6-79A3-42CC-A2AB-77B62797880A
+req_id is22C0A9A6-79A3-42CC-A2AB-77B62797880A
+output json = [{"Latitude":"29.74411311357304","Longitude":" 76.36880789399149"},{"Latitude":"28.42884906757866","Longitude":" 75.60525808930399"},{"Latitude":"28.28866505577025","Longitude":" 77.50589285492899"},{"Latitude":"29.562710858462694","Longitude":" 77.80252371430399"}]
+Request Recevied
+Request Recevied
+action is =load_requests
+load user requests!
+input userid = 27399E62-00FE-4C57-82B9-FD4F3A163FBD
+user id is27399E62-00FE-4C57-82B9-FD4F3A163FBD
+output json = [{"RequestID":"22C0A9A6-79A3-42CC-A2AB-77B62797880A","RequestTitle":"title","RequestDescription":"description","Date":"2025-02-12 10:55:05 am"}]
+Request Recevied
+Request Recevied
+action is =get_vertices
+load request vertices!
+input json = {"requestid":"22C0A9A6-79A3-42CC-A2AB-77B62797880A"}
+input request_id = 22C0A9A6-79A3-42CC-A2AB-77B62797880A
+req_id is22C0A9A6-79A3-42CC-A2AB-77B62797880A
+output json = [{"Latitude":"29.74411311357304","Longitude":" 76.36880789399149"},{"Latitude":"28.42884906757866","Longitude":" 75.60525808930399"},{"Latitude":"28.28866505577025","Longitude":" 77.50589285492899"},{"Latitude":"29.562710858462694","Longitude":" 77.80252371430399"}]
+Request Recevied
+Request Recevied
+action is =get_vertices
+load request vertices!
+input json = {"requestid":"22C0A9A6-79A3-42CC-A2AB-77B62797880A"}
+input request_id = 22C0A9A6-79A3-42CC-A2AB-77B62797880A
+req_id is22C0A9A6-79A3-42CC-A2AB-77B62797880A
+output json = [{"Latitude":"29.74411311357304","Longitude":" 76.36880789399149"},{"Latitude":"28.42884906757866","Longitude":" 75.60525808930399"},{"Latitude":"28.28866505577025","Longitude":" 77.50589285492899"},{"Latitude":"29.562710858462694","Longitude":" 77.80252371430399"}]
+Request Recevied
+Request Recevied
+action is =load_requests
+load user requests!
+input userid = 27399E62-00FE-4C57-82B9-FD4F3A163FBD
+user id is27399E62-00FE-4C57-82B9-FD4F3A163FBD
+output json = [{"RequestID":"22C0A9A6-79A3-42CC-A2AB-77B62797880A","RequestTitle":"title","RequestDescription":"description","Date":"2025-02-12 10:55:05 am"}]
+Request Recevied
+Request Recevied
+action is =get_vertices
+load request vertices!
+input json = {"requestid":"22C0A9A6-79A3-42CC-A2AB-77B62797880A"}
+input request_id = 22C0A9A6-79A3-42CC-A2AB-77B62797880A
+req_id is22C0A9A6-79A3-42CC-A2AB-77B62797880A
+output json = [{"Latitude":"29.74411311357304","Longitude":" 76.36880789399149"},{"Latitude":"28.42884906757866","Longitude":" 75.60525808930399"},{"Latitude":"28.28866505577025","Longitude":" 77.50589285492899"},{"Latitude":"29.562710858462694","Longitude":" 77.80252371430399"}]

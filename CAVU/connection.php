@@ -42,7 +42,7 @@ class PDOConnection
 		if ($result) {
 			$user_info = $stmt->fetch();
 			if ($user_info) {
-				return $user_info['userid']; 
+				return $user_info['userid'];
 			}
 		}
 		return '';
@@ -88,6 +88,50 @@ class PDOConnection
 			return false;
 		}
 	}
+	function add_new_request($userid, $title, $description)
+	{
+		take_log("insert request in db");
+
+		$mysql_db = $this->db;
+		$requestid = $this->NEWGUID();
+		$date = date('Y-m-d h:i:s a', time());
+		$sql = "insert into UserRequests (RequestID, UserID, RequestTitle, Date, RequestDescription) values  (:RequestID, :UserID,:RequestTitle, :Date, :RequestDescription)";
+		$stmt = $mysql_db->prepare($sql);
+		$stmt->bindValue(':RequestID', $requestid, PDO::PARAM_STR);
+		$stmt->bindValue(':UserID', $userid, PDO::PARAM_STR);
+		$stmt->bindValue(':RequestTitle', $title, PDO::PARAM_STR);
+		$stmt->bindValue(':Date', $date, PDO::PARAM_STR);
+		$stmt->bindValue(':RequestDescription', $description, PDO::PARAM_STR);
+		$result = $stmt->execute();
+		if ($result)
+		{
+			take_log("success request id is:".$requestid);
+
+			return $requestid;
+		}
+		take_log("failed to insert");
+
+		return '';
+	}
+	 
+	function add_new_point($requestid, $lat, $lng)
+	{
+
+		$mysql_db = $this->db;
+		$PointID = $this->NEWGUID(); 
+		$sql = "insert into RequestPoints (PointID, RequestID, Latitude, Longitude) values  (:PointID, :RequestID,:Latitude, :Longitude)";
+		$stmt = $mysql_db->prepare($sql);
+		$stmt->bindValue(':PointID', $PointID, PDO::PARAM_STR);
+		$stmt->bindValue(':RequestID', $requestid, PDO::PARAM_STR);
+		$stmt->bindValue(':Latitude', $lat, PDO::PARAM_STR);
+		$stmt->bindValue(':Longitude', $lng, PDO::PARAM_STR);
+		$result = $stmt->execute();
+		if ($result) {
+			return true;
+		}
+		return false;
+
+	}
 	function get_all_user_requests($userid)
 	{
 
@@ -108,9 +152,9 @@ class PDOConnection
 				"RequestTitle" => $RequestTitle,
 				"RequestDescription" => $RequestDescription,
 				"Date" => $Date
-			); 
+			);
 			array_push($req_list, $req);
-		} 
+		}
 		return $req_list;
 
 	}
@@ -126,67 +170,17 @@ class PDOConnection
 		$point_list = array();
 		while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 			$Latitude = $row['Latitude'];
-			$Longitude = $row['Longitude']; 
+			$Longitude = $row['Longitude'];
 			$point = array(
 				"Latitude" => $Latitude,
 				"Longitude" => $Longitude
-			); 
+			);
 			array_push($point_list, $point);
-		} 
+		}
 		return $point_list;
 
 	}
-
-	function add_new_request($userid, $requesttitle, $request_date, $request_description)
-	{
-
-		take_log("user id is" . $userid);
-		take_log("request_date is " . $request_date);
-		take_log("request_description" . $request_description);
-
-		$mysql_db = $this->db;
-		$requestid = $this->NEWGUID();
-		take_log("requestid is" . $requestid);
-
-		$sql = "insert into UserRequests (RequestID, UserID,RequestTitle, Date, RequestDescription) values (:RequestID, :UserID,:RequestTitle, :Date, :RequestDescription)";
-		$stmt = $mysql_db->prepare($sql);
-		$stmt->bindValue(':RequestID', $requestid, PDO::PARAM_STR);
-		$stmt->bindValue(':UserID', $userid, PDO::PARAM_STR);
-		$stmt->bindValue(':RequestTitle', $requesttitle, PDO::PARAM_STR);
-
-		$stmt->bindValue(':Date', $request_date, PDO::PARAM_STR);
-		$stmt->bindValue(':RequestDescription', $request_description, PDO::PARAM_STR);
-		$result = $stmt->execute();
-		if ($result) {
-			return true;
-		}
-		return false;
-
-	}
-	function add_request_point($requstid, $latitude, $longitude)
-	{
-
-		take_log("requestid is" . $requstid);
-		take_log("latitude is " . $latitude);
-		take_log("longitude" . $longitude);
-
-		$mysql_db = $this->db;
-		$PointID = $this->NEWGUID();
-
-
-		$sql = "insert into RequestPoints (PointID, RequestID, Latitude, Longitude) values (:PointID, :RequestID, :Latitude, :Longitude)";
-		$stmt = $mysql_db->prepare($sql);
-		$stmt->bindValue(':RequestID', $requstid, PDO::PARAM_STR);
-		$stmt->bindValue(':PointID', $PointID, PDO::PARAM_STR);
-		$stmt->bindValue(':Latitude', $latitude, PDO::PARAM_STR);
-		$stmt->bindValue(':Longitude', $longitude, PDO::PARAM_STR);
-		$result = $stmt->execute();
-		if ($result) {
-			return true;
-		}
-		return false;
-
-	}
+  
 }
 
 
