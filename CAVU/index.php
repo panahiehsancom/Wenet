@@ -138,7 +138,9 @@
 
 
 
-    <div class="section light full-height hide">
+
+
+    <div class="section  ">
       <div class="row">
         <div class="col s12 m10 offset-m1 center">
           <h1>blog</h1>
@@ -146,7 +148,7 @@
             <div class="col s12 m6 l4">
               <div class="card fade-in-out up-in-out" data-duration="0">
                 <div class="card-image">
-                  <a href="blog.php"><img src="http://placehold.it/600x400"></a>
+                  <a href="blog.php"><img src="http://localhost/wenet/CAVU/images/blog.webp"></a>
                   <span class="card-title">Something Interesting</span>
                 </div>
               </div>
@@ -154,7 +156,7 @@
             <div class="col s12 m6 l4">
               <div class="card fade-in-out up-in-out" data-duration="0">
                 <div class="card-image">
-                  <a href="blog.html"><img src="http://placehold.it/600x400"></a>
+                <a href="blog.php"><img src="http://localhost/wenet/CAVU/images/blog.webp"></a>
                   <span class="card-title">Another Blog Post</span>
                 </div>
               </div>
@@ -162,39 +164,96 @@
             <div class="col s12 m6 l4">
               <div class="card fade-in-out up-in-out" data-duration="0">
                 <div class="card-image">
-                  <a href="blog.html"><img src="http://placehold.it/600x400"></a>
+                <a href="blog.php"><img src="http://localhost/wenet/CAVU/images/blog.webp"></a>
                   <span class="card-title">Click Bait Article</span>
                 </div>
               </div>
             </div>
-            <div class="col s12 m6 l4">
-              <div class="card fade-in-out up-in-out" data-duration="0">
-                <div class="card-image">
-                  <a href="blog.html"><img src="http://placehold.it/600x400"></a>
-                  <span class="card-title">Don't Read This!</span>
-                </div>
-              </div>
-            </div>
-            <div class="col s12 m6 l4">
-              <div class="card fade-in-out up-in-out" data-duration="0">
-                <div class="card-image">
-                  <a href="blog.html"><img src="http://placehold.it/600x400"></a>
-                  <span class="card-title">Why Are You Still Reading?</span>
-                </div>
-              </div>
-            </div>
-            <div class="col s12 m6 l4">
-              <div class="card fade-in-out up-in-out" data-duration="0">
-                <div class="card-image">
-                  <a href="blog.html"><img src="http://placehold.it/600x400"></a>
-                  <span class="card-title">Good Bye</span>
-                </div>
-              </div>
-            </div>
+
           </div>
         </div>
       </div>
     </div>
+
+
+
+    <div class="section black valign-wrapper">
+      <div class="row valign">
+        <div class="container center">
+          <div class="row">
+            
+          </div>
+          <div class="row staggered-transition-wrapper center" data-duration="0" data-staggereddelay=".9">
+          <div class="col s12 fade-in-out down-in-out"><h2 class="section-title">Why <span class="cavu">CAVU</span> For Crop Insurance Companies?</h2></div>
+              <div class="col s12 m4 service fade-in-out up-in-out">
+                <i class="material-icons large">pie_chart</i>
+                <h4>Scalable Insights Across Extensive Regions:</h4>
+                <p class="caption">
+                  Acquire actionable intelligence across expansive agricultural areas.  Our satellite imagery and vegetation indices furnish consistent and dependable data for comprehensive crop monitoring. </p>
+              </div>  
+              <div class="col s12 m4 service fade-in-out up-in-out">
+                <i class="material-icons large">trending_up</i>
+                <h4> Optimized Field Assessments:  </h4>
+                <p class="caption">
+                Enhance the precision and efficiency of field inspections.  Equip adjusters with precise field data prior to their arrival, facilitating more effective on-site evaluations.</p>
+              </div>
+              <div class="col s12 m4 service fade-in-out up-in-out">
+                <i class="material-icons large">security</i>
+                <h4>Expedited Claims Processing: </h4>
+                <p class="caption">
+                Streamline and accelerate the claims resolution process. Leverage satellite-based damage assessments to minimize manual verification time and elevate the accuracy of claim settlements.</p>
+              </div>
+            
+              <div class="col s12 cta ">
+                <a class="btn" href="">Contact us</a>
+                <h4>Let us help you</h4>
+                <span>take your crop insurance service to the next level. </span>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+      <div class="row">
+        <div class="col s12 m10 offset-m1 center">
+          <div class="row masonry-grid">
+                        <div class="container logo-customer-wrp">
+                            <h2 class="center large">   OUR GROWING LIST OF BUSINESS PARTNERS
+                            </h2>
+                            
+                            <div class="logo-customer">
+                                <img src="http://localhost/wenet/CAVU/images/white-logo.webp" alt="customer ">
+                            </div>
+                            <div class="logo-customer">
+                                <img src="http://localhost/wenet/CAVU/images/white-logo.webp" alt="customer ">
+                            </div>
+
+                            <div class="logo-customer">
+                                <img src="http://localhost/wenet/CAVU/images/white-logo.webp" alt="customer ">
+                            </div>
+
+                            <div class="logo-customer">
+                                <img src="http://localhost/wenet/CAVU/images/white-logo.webp" alt="customer ">
+                            </div>
+
+                            <div class="logo-customer">
+                                <img src="http://localhost/wenet/CAVU/images/white-logo.webp" alt="customer ">
+                            </div>
+
+                            <div class="logo-customer">
+                                <img src="http://localhost/wenet/CAVU/images/white-logo.webp" alt="customer ">
+                            </div>
+                            <div class="logo-customer">
+                                <img src="http://localhost/wenet/CAVU/images/white-logo.webp" alt="customer ">
+                            </div>
+                            <div class="logo-customer">
+                                <img src="http://localhost/wenet/CAVU/images/white-logo.webp" alt="customer ">
+                            </div>
+                        </div>
+                    </div>
+        </div>
+      </div>
 
 
     <div class="section light full-height hide">
@@ -363,32 +422,6 @@
     </div>
 
 
-    <div class="section black full-height hide">
-      <div class="container">
-        <div class="row">
-          <div class="col s12 m8 offset-m2">
-            <div class="feature">
-              <h3>This is a cool feature</h3>
-              <p>Locavore drinking vinegar quinoa seitan church-key, tilde aliqua. Hoodie mustache aliquip, selfies bitters poutine adipisicing scenester man braid jean shorts. Aliqua mlkshk 90's distillery, truffaut sapiente trust fund fashion axe officia selvage occaecat locavore accusamus. </p>
-            </div>
-            <div class="device-triplet">
-              <div class="phone-preview-sizer iphone">
-                <div class="phone-preview"></div>
-                <div class="image-container default" style="background-image:url(http://placehold.it/530x990)"></div>
-              </div>
-              <div class="phone-preview-sizer iphone left-in-out">
-                <div class="phone-preview"></div>
-                <div class="image-container default" style="background-image:url(http://placehold.it/530x990)"></div>
-              </div>
-              <div class="phone-preview-sizer iphone right-in-out">
-                <div class="phone-preview"></div>
-                <div class="image-container default" style="background-image:url(http://placehold.it/530x990)"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <!-- Contact Us -->
     <div class="section  valign-wrapper ">
