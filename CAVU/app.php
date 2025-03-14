@@ -1,6 +1,10 @@
 <?php
 session_start();
-
+if(!isset($_SESSION['userid']))
+{
+  header("Location: login.php"); 
+}
+echo $_SESSION['userid'];
 ?>
 <html>
   <head>
@@ -84,7 +88,7 @@ session_start();
               <input id="search" type="text" placeholder="Search" />
             </div>
           </div>
-
+          
           <ul class="fields" id="user_requests">
             <li class="field-item">
               <img src="images/field.webp" alt="Field Image" class="circle" />

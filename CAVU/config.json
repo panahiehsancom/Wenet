@@ -4,9 +4,9 @@
       "database": [
         {
           "type": "mysql",
-          "host": "targetek.ae",
+          "host": "localhost",
           "db_name": "CAVU",
-          "username": "edenpani",
+          "username": "root",
           "password": "belDEN99**"
         }
       ]

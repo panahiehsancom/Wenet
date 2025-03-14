@@ -65,7 +65,7 @@ async function load_all_user_request() {
         const title = request_list[i].RequestTitle;
         const description = request_list[i].RequestDescription;
         const datetime = request_list[i].Date;
-        const content = '<button onclick="load_request(\'' + id + '\')"><li><img src="images/field.webp"> <span class="title">' + title + '</span> <p>' + description + datetime + '</p></li></button>';
+        const content = '<li class="field-item"><img src="images/field.webp"  alt="Field Image" class="circle"><div class="content"/>  <h5 class="title">' + title + '</h5> <p>' + description + '</p></div></li> ';
         element.innerHTML += content;
     }
 
