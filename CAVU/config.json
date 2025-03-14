@@ -5,8 +5,8 @@
         {
           "type": "mysql",
           "host": "targetek.ae",
-          "db_name": "targetek_CAVU",
-          "username": "targetek_edenpani",
+          "db_name": "CAVU",
+          "username": "edenpani",
           "password": "belDEN99**"
         }
       ]
