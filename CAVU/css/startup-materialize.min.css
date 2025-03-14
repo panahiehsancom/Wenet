@@ -6,7 +6,6 @@
     color: transparent !important
 }
 
-/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 html {
     line-height: 1.15;
     -ms-text-size-adjust: 100%;
@@ -10193,7 +10192,8 @@ nav.navbar ul a:hover {
     border: 2px solid #eee;
     box-sizing: content-box;
     color: #eee;
-    transition: color .2s, background-color .2s
+    transition: color .2s, background-color .2s;
+    margin: 1rem auto;
 }
 
 .btn::before,
@@ -10911,6 +10911,7 @@ body.light .cta {
     background: #fff;
     border: 2px solid #c1efe7;
 }
+<<<<<<< HEAD
 
 .logo-customer {
     transition: .3s ease;
@@ -10934,6 +10935,12 @@ body.light .cta {
     width: 120px
 }
 
+=======
+.logo-customer{transition:.3s ease;width: 120px;display:inline-block;margin: 5rem 1rem 2rem;/* filter:grayscale(1); */padding:10px}
+.logo-customer-wrp{text-align:center}
+.logo-customer:hover{filter:grayscale(0);transform:scale(1.2)}
+.logo-customer.wide-logo{width:120px}
+>>>>>>> e6df57592f486a216e7297387bacbe60af703947
 a.tel {
     font-size: 30px;
     display: block;
@@ -10952,3 +10959,21 @@ a.tel i {
     height: 200px;
     margin: 2rem auto;
 }
+.item.client-story {    background: #3c3c3c;
+    padding: 10px;    text-align: left;
+    height: 236px;    border-radius: 18px;}
+.item.client-story img {
+    width: 50px !important;!i;!;!ه;!هپ;!ه;!;
+    height: 50px;
+    border-radius: 100%;
+    float: left;
+    margin: 0 10px;
+    }
+span.name {margin-top: 2px;display: block;font-weight: 700;}
+body.light  .btn-large {
+    background-color: #3c3c3c;}
+body.light .item.client-story {
+    background: #fff;}
+    .section.small-section {
+        height: 30vh;
+    }

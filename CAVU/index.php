@@ -8,7 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="css/startup-materialize.min.css">
-
+    <link rel="stylesheet" href="owlcarousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/dist/assets/owl.theme.default.min.css">
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
@@ -138,7 +139,43 @@
 
 
 
+    <div class="section black valign-wrapper">
+      <div class="row valign">
+        <div class="container center">
+          <div class="row">
+            <div class="col s12"><h2 class="section-title">Our Clients Say         </h2></div>
+            <p>We share our customers stories about their challenges in their area. These stories are about customers requirements and the different solutions that is provided by Cropinno, an AI-powered decision support tool for agriculture.
 
+</p>
+          </div>
+
+          <div class="owl-carousel  owlitem owl-theme">
+              <div class="item client-story">
+                <p>
+						The CAVU app has a lot of good things going for it. I found it helpful in confirming the areas of my field that were doing well and also highlighted the issues my field has. I also found the Cropinno team helpful and good with updates when I was busy.
+Thanks Cropinno team					</p>
+                <br>
+                <img src="http://localhost/wenet/CAVU/images/Janet-Young-Williament-rotated.jpg">
+                <span class="name">Janet</span>
+                <span class="description">Farmer, Miami </span>
+              </div>
+              <div class="item client-story">
+                <p>
+                I am always trying to improve my net profit. the biggest
+problem with farmers, besides the fact of record-keeping, is decision-making. So, when is
+the right time to seed? When is the right time to go out and apply your herbicide, pesticide or
+fungicide?  And when is the right time to go and harvest? Satellite Imagery is helpful in this regard					</p>
+                <br>
+                <img src="http://localhost/wenet/CAVU/images/Screenshot-2024-01-23-at-9.18.33-PM.png">
+                <span class="name">Karen</span>
+                <span class="description">Farmer, Miami </span>
+              </div>
+              
+          </div>
+
+        </div>
+      </div>
+    </div>
 
     <div class="section  ">
       <div class="row">
@@ -214,7 +251,7 @@
       </div>
     </div>
 
-
+    <div class="section small-section">
       <div class="row">
         <div class="col s12 m10 offset-m1 center">
           <div class="row masonry-grid">
@@ -234,192 +271,27 @@
                             </div>
 
                             <div class="logo-customer">
-                                <img src="http://localhost/wenet/CAVU/images/white-logo.webp" alt="customer ">
+                                <img src="https://cropinno.com/wp-content/uploads/2024/06/Global-Logo.svg" alt="customer ">
                             </div>
 
                             <div class="logo-customer">
-                                <img src="http://localhost/wenet/CAVU/images/white-logo.webp" alt="customer ">
+                                <img src="https://cropinno.com/wp-content/uploads/2023/09/techplace-1536x864-1-300x169.png" alt="customer ">
                             </div>
 
                             <div class="logo-customer">
-                                <img src="http://localhost/wenet/CAVU/images/white-logo.webp" alt="customer ">
+                                <img src="https://cropinno.com/wp-content/uploads/2023/09/if-logo-colour-1-1536x604-1-300x118.png" alt="customer ">
                             </div>
                             <div class="logo-customer">
-                                <img src="http://localhost/wenet/CAVU/images/white-logo.webp" alt="customer ">
+                                <img src="https://cropinno.com/wp-content/uploads/2022/05/Planet_logo_New-300x147.png" alt="customer ">
                             </div>
                             <div class="logo-customer">
-                                <img src="http://localhost/wenet/CAVU/images/white-logo.webp" alt="customer ">
+                                <img src="https://cropinno.com/wp-content/uploads/2023/02/Logo_Header_THRIVE.svg" alt="customer ">
                             </div>
                         </div>
                     </div>
         </div>
       </div>
-
-
-    <div class="section light full-height hide">
-      <div class="container">
-        <div class="row">
-          <div class="col m3">
-            <div class="perspective-wrapper">
-              <div class="feature rotate-y-in-out fade-in-out left-transform-origin right-align">
-                <h3>Cool feature</h3>
-                <p>Locavore drinking vinegar quinoa seitan church-key, tilde aliqua. Hoodie mustache aliquip, selfies bitters poutine adipisicing scenester man braid jean shorts. Aliqua mlkshk 90's distillery, truffaut sapiente trust fund fashion axe officia selvage occaecat locavore accusamus. </p>
-              </div>
-            </div>
-            <div class="perspective-wrapper">
-              <div class="feature rotate-y-in-out fade-in-out left-transform-origin right-align">
-                <h3>Cool feature</h3>
-                <p>Locavore drinking vinegar quinoa seitan church-key, tilde aliqua. Hoodie mustache aliquip, selfies bitters poutine adipisicing scenester man braid jean shorts. Aliqua mlkshk 90's distillery, truffaut sapiente trust fund fashion axe officia selvage occaecat locavore accusamus. </p>
-              </div>
-            </div>
-          </div>
-          <div class="col m6">
-            <div class="phone-preview-halfway">
-              <div class="phone-preview-sizer">
-                <div class="phone-preview"></div>
-                <div class="image-container default" style="background-image:url(http://placehold.it/530x990)"></div>
-              </div>
-            </div>
-          </div>
-          <div class="col m3">
-            <div class="perspective-wrapper">
-              <div class="feature rotate-y-in-out fade-in-out right-transform-origin">
-                <h3>Cool feature</h3>
-                <p>Locavore drinking vinegar quinoa seitan church-key, tilde aliqua. Hoodie mustache aliquip, selfies bitters poutine adipisicing scenester man braid jean shorts. Aliqua mlkshk 90's distillery, truffaut sapiente trust fund fashion axe officia selvage occaecat locavore accusamus. </p>
-              </div>
-            </div>
-            <div class="perspective-wrapper">
-              <div class="feature rotate-y-in-out fade-in-out right-transform-origin">
-                <h3>Cool feature</h3>
-                <p>Locavore drinking vinegar quinoa seitan church-key, tilde aliqua. Hoodie mustache aliquip, selfies bitters poutine adipisicing scenester man braid jean shorts. Aliqua mlkshk 90's distillery, truffaut sapiente trust fund fashion axe officia selvage occaecat locavore accusamus. </p>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
-    </div>
-
-
-    <div class="section full-height hide">
-      <div class="container">
-        <div class="row valign-wrapper">
-          <div class="col m3">
-            <div class="phone-preview-sizer right-in-out fade-in-out">
-              <div class="phone-preview"></div>
-              <div class="image-container default" style="background-image:url(http://placehold.it/530x990)"></div>
-            </div>
-          </div>
-          <div class="col m8 offset-m1">
-            <div class="staggered-transition-wrapper">
-              <div class="feature left-in-out fade-in-out">
-                <h3>This is a cool feature</h3>
-                <p>Locavore drinking vinegar quinoa seitan church-key, tilde aliqua. Hoodie mustache aliquip, selfies bitters poutine adipisicing scenester man braid jean shorts. Aliqua mlkshk 90's distillery, truffaut sapiente trust fund fashion axe officia selvage occaecat locavore accusamus. </p>
-              </div>
-              <div class="feature left-in-out fade-in-out">
-                <h3>This is a cool feature</h3>
-                <p>Locavore drinking vinegar quinoa seitan church-key, tilde aliqua. Hoodie mustache aliquip, selfies bitters poutine adipisicing scenester man braid jean shorts. Aliqua mlkshk 90's distillery, truffaut sapiente trust fund fashion axe officia selvage occaecat locavore accusamus. </p>
-              </div>
-              <div class="feature left-in-out fade-in-out">
-                <h3>This is a cool feature</h3>
-                <p>Locavore drinking vinegar quinoa seitan church-key, tilde aliqua. Hoodie mustache aliquip, selfies bitters poutine adipisicing scenester man braid jean shorts. Aliqua mlkshk 90's distillery, truffaut sapiente trust fund fashion axe officia selvage occaecat locavore accusamus. </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="section light full-height hide">
-      <div class="container">
-        <div class="row valign-wrapper">
-          <div class="col s12 m4">
-            <div class="staggered-transition-wrapper">
-              <div class="feature fade-right-in-out">
-                <h3>This is a cool feature</h3>
-                <p>Locavore drinking vinegar quinoa seitan church-key, tilde aliqua. Hoodie mustache aliquip, selfies bitters poutine adipisicing scenester man braid jean shorts. Aliqua mlkshk 90's distillery, truffaut sapiente trust fund fashion axe officia selvage occaecat locavore accusamus. </p>
-              </div>
-              <div class="feature fade-right-in-out">
-                <h3>This is a cool feature</h3>
-                <p>Locavore drinking vinegar quinoa seitan church-key, tilde aliqua. Hoodie mustache aliquip, selfies bitters poutine adipisicing scenester man braid jean shorts. Aliqua mlkshk 90's distillery, truffaut sapiente trust fund fashion axe officia selvage occaecat locavore accusamus. </p>
-              </div>
-            </div>
-          </div>
-          <div class="col s12 m8">
-            <div class="device-pair">
-              <div class="tablet-preview-sizer">
-                <div class="tablet-preview"></div>
-                <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
-              </div>
-              <div class="tablet-preview-sizer left-in-out">
-                <div class="tablet-preview"></div>
-                <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="section black full-height hide">
-      <div class="container">
-        <div class="row valign-wrapper">
-          <div class="col s12 m8">
-            <div class="device-pair right-side">
-              <div class="tablet-preview-sizer white">
-                <div class="tablet-preview"></div>
-                <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
-              </div>
-              <div class="tablet-preview-sizer white right-in-out">
-                <div class="tablet-preview"></div>
-                <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
-              </div>
-            </div>
-          </div>
-          <div class="col s12 m4">
-            <div class="staggered-transition-wrapper">
-              <div class="feature fade-left-in-out">
-                <h3>This is a cool feature</h3>
-                <p>Locavore drinking vinegar quinoa seitan church-key, tilde aliqua. Hoodie mustache aliquip, selfies bitters poutine adipisicing scenester man braid jean shorts. Aliqua mlkshk 90's distillery, truffaut sapiente trust fund fashion axe officia selvage occaecat locavore accusamus. </p>
-              </div>
-              <div class="feature fade-left-in-out">
-                <h3>This is a cool feature</h3>
-                <p>Locavore drinking vinegar quinoa seitan church-key, tilde aliqua. Hoodie mustache aliquip, selfies bitters poutine adipisicing scenester man braid jean shorts. Aliqua mlkshk 90's distillery, truffaut sapiente trust fund fashion axe officia selvage occaecat locavore accusamus. </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="section light full-height hide">
-      <div class="container">
-        <div class="row">
-          <div class="col s12 m8 offset-m2">
-            <div class="feature">
-              <h3>This is a cool feature</h3>
-              <p>Locavore drinking vinegar quinoa seitan church-key, tilde aliqua. Hoodie mustache aliquip, selfies bitters poutine adipisicing scenester man braid jean shorts. Aliqua mlkshk 90's distillery, truffaut sapiente trust fund fashion axe officia selvage occaecat locavore accusamus. </p>
-            </div>
-            <div class="device-triplet">
-              <div class="tablet-preview-sizer">
-                <div class="tablet-preview"></div>
-                <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
-              </div>
-              <div class="tablet-preview-sizer left-in-out">
-                <div class="tablet-preview"></div>
-                <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
-              </div>
-              <div class="tablet-preview-sizer right-in-out">
-                <div class="tablet-preview"></div>
-                <div class="image-container default" style="background-image:url(http://placehold.it/600x400)"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
 
 
@@ -446,6 +318,32 @@
         </form>
       </div>
     </div>
+
+
+<script src="owlcarousel/docs/assets/vendors/jquery.min.js" ></script>
+<script src="owlcarousel/dist/owl.carousel.min.js" ></script>
+
+<script>
+$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:2
+        }
+    }
+})
+</script>
+
+
+
     <div class="toggle">
       <input type="checkbox" class="checkbox" id="ChangeTheme">
       <label for="ChangeTheme" class="checkbox-label">
@@ -518,7 +416,6 @@ function nodark() {
     </footer>
 
     <!-- Scripts -->
-    <script src="js/jquery.min.js"></script>
     <script src="js/materialize.min.js"></script>
 
     <!-- External libraries -->

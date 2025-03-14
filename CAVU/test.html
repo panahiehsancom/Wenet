@@ -1,0 +1,36 @@
+
+<link rel="stylesheet" href="owlcarousel/dist/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="owlcarousel/dist/assets/owl.theme.default.min.css">
+
+
+<div class="owl-carousel  owlitem owl-theme">
+    <div class="item"><h4>1</h4></div>
+    <div class="item"><h4>2</h4></div>
+    <div class="item"><h4>3</h4></div>
+    <div class="item"><h4>4</h4></div>
+    <div class="item"><h4>5</h4></div>
+    <div class="item"><h4>6</h4></div>
+</div>
+
+
+<script src="owlcarousel/docs/assets/vendors/jquery.min.js" defer></script>
+<script src="owlcarousel/dist/owl.carousel.min.js" ></script>
+
+<script>
+$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+})
+</script>
